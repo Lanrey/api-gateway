@@ -24,10 +24,10 @@ const getAllNotification = async function (req, res, next) {
     console.log(req.query.user_id)
     console.log(req.params.page);
 
-    const data = await service.getAllNotification(req.params.page, req.query.user_id);
+    const result = await service.getAllNotification(req.params.page, req.query.user_id);
     // Log action
 
-    res.json({ success: true, data });
+    res.json({ success: true, result });
   } catch (error) {
     next(error);
   }
