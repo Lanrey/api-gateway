@@ -21,9 +21,6 @@ const getNotification = async function (req, res, next) {
 const getAllNotification = async function (req, res, next) {
   try {
 
-    console.log(req.query.user_id)
-    console.log(req.params.page);
-
     const result = await service.getAllNotification(req.params.page, req.query.user_id);
     // Log action
 
